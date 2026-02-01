@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: If you use this software, please cite the paper below.
+title: CNN–BiLSTM macroeconomic forecasting (experiment pipeline)
+version: 0.1.0
+date-released: "2026-02-01"
+license: MIT
+
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Staffini
+      given-names: Alessio
+  title: A CNN–BiLSTM Architecture for Macroeconomic Time Series Forecasting
+  journal: Engineering Proceedings
+  year: 2023
+  volume: 39
+  issue: 1
+  article-number: 33
+  doi: 10.3390/engproc2023039033
+  url: https://doi.org/10.3390/engproc2023039033
+

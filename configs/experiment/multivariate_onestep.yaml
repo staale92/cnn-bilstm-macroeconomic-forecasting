@@ -1,0 +1,61 @@
+experiment:
+  name: multivariate_onestep
+  feature_mode: multivariate
+  horizon: 1
+  lookback: 12
+  stride: 1
+  dataset_config: configs/dataset.yaml
+  covariates_config: configs/covariates_table_a1.yaml
+  baselines_config: configs/baselines.yaml
+  results_dir: results
+  targets:
+    - consumption
+    - investments
+    - imports
+    - exports
+    - inflation
+    - wages
+    - per_capita_gdp
+    - firms_profits
+    - corporate_taxation
+    - private_savings
+    - exp_durable_goods
+    - gdp
+    - household_income
+    - government_expenditure
+    - house_prices
+    - employment_rate
+    - unemployment_rate
+    - unempl_over_27w
+
+training:
+  epochs: 200
+  batch_size: 32
+  learning_rate: 0.001
+  max_norm: 3.0
+  early_stopping: true
+  patience: 20
+  val_fraction: 0.1
+
+model:
+  cnn_bilstm:
+    conv_filters: 64
+    conv_kernel: 3
+    pool_size: 2
+    lstm_units: [200, 100, 50]
+    fc_units: 25
+    dropout_cnn: 0.1
+    dropout_lstm: 0.5
+    dropout_fc: 0.1
+  bilstm:
+    lstm_units: [200, 100, 50]
+    fc_units: 25
+    dropout_lstm: 0.5
+    dropout_fc: 0.1
+
+repeats:
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+plots:
+  targets: [investments]
+

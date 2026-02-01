@@ -1,0 +1,169 @@
+# Appendix A.2: ARIMA/ARIMAX/VAR specs.
+# For each variable:
+#  - arima.multistep_order: (p,d,q) used for 12-step forecasting
+#  - arima.onestep_order: (p,d,q) used for 1-step forecasting
+#  - arimax.order: (p,d,q)
+#  - var.lags: lag order (l)
+
+consumption:
+  arima:
+    multistep_order: [3, 0, 4]
+    onestep_order: [4, 0, 1]
+  arimax:
+    order: [4, 0, 4]
+  var:
+    lags: 8
+
+investments:
+  arima:
+    multistep_order: [2, 0, 2]
+    onestep_order: [4, 0, 1]
+  arimax:
+    order: [4, 0, 4]
+  var:
+    lags: 5
+
+imports:
+  arima:
+    multistep_order: [2, 0, 4]
+    onestep_order: [4, 0, 2]
+  arimax:
+    order: [0, 0, 4]
+  var:
+    lags: 8
+
+exports:
+  arima:
+    multistep_order: [6, 0, 4]
+    onestep_order: [4, 0, 1]
+  arimax:
+    order: [0, 0, 4]
+  var:
+    lags: 8
+
+inflation:
+  arima:
+    multistep_order: [8, 0, 2]
+    onestep_order: [4, 0, 1]
+  arimax:
+    order: [4, 0, 2]
+  var:
+    lags: 8
+
+wages:
+  arima:
+    multistep_order: [3, 1, 2]
+    onestep_order: [2, 1, 1]
+  arimax:
+    order: [4, 1, 2]
+  var:
+    lags: 7
+
+per_capita_gdp:
+  arima:
+    multistep_order: [8, 1, 4]
+    onestep_order: [2, 1, 1]
+  arimax:
+    order: [5, 1, 4]
+  var:
+    lags: 7
+
+firms_profits:
+  arima:
+    multistep_order: [2, 1, 2]
+    onestep_order: [3, 1, 1]
+  arimax:
+    order: [4, 1, 4]
+  var:
+    lags: 7
+
+corporate_taxation:
+  arima:
+    multistep_order: [8, 1, 1]
+    onestep_order: [3, 1, 1]
+  arimax:
+    order: [7, 1, 4]
+  var:
+    lags: 7
+
+private_savings:
+  arima:
+    multistep_order: [3, 1, 4]
+    onestep_order: [3, 1, 1]
+  arimax:
+    order: [4, 1, 4]
+  var:
+    lags: 7
+
+exp_durable_goods:
+  arima:
+    multistep_order: [3, 0, 4]
+    onestep_order: [4, 0, 1]
+  arimax:
+    order: [0, 0, 4]
+  var:
+    lags: 7
+
+gdp:
+  arima:
+    multistep_order: [8, 0, 2]
+    onestep_order: [4, 0, 1]
+  arimax:
+    order: [8, 0, 4]
+  var:
+    lags: 5
+
+household_income:
+  arima:
+    multistep_order: [3, 0, 4]
+    onestep_order: [3, 0, 2]
+  arimax:
+    order: [0, 0, 4]
+  var:
+    lags: 5
+
+government_expenditure:
+  arima:
+    multistep_order: [4, 0, 4]
+    onestep_order: [4, 0, 1]
+  arimax:
+    order: [4, 0, 4]
+  var:
+    lags: 8
+
+house_prices:
+  arima:
+    multistep_order: [6, 0, 4]
+    onestep_order: [4, 0, 1]
+  arimax:
+    order: [8, 0, 4]
+  var:
+    lags: 8
+
+employment_rate:
+  arima:
+    multistep_order: [8, 0, 3]
+    onestep_order: [4, 0, 1]
+  arimax:
+    order: [4, 0, 2]
+  var:
+    lags: 8
+
+unemployment_rate:
+  arima:
+    multistep_order: [8, 0, 4]
+    onestep_order: [4, 0, 1]
+  arimax:
+    order: [7, 0, 3]
+  var:
+    lags: 8
+
+unempl_over_27w:
+  arima:
+    multistep_order: [8, 0, 4]
+    onestep_order: [4, 0, 2]
+  arimax:
+    order: [4, 0, 4]
+  var:
+    lags: 7
+

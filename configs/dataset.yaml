@@ -1,0 +1,14 @@
+dataset:
+  raw_path: data/data_all_variables.xls
+  sheet_name: 0
+  date_col: date
+  fill_missing:
+    # The provided XLS has 7 leading NaNs for 3 variables; the paper reports no missing values.
+    # This strategy restores a complete panel without peeking into the future beyond the first observed point.
+    strategy: backfill_then_forwardfill
+
+train_test_split:
+  # Paper protocol: first 697 train, last 174 test (80/20 time split on 871 obs).
+  train_size: 697
+  test_size: 174
+

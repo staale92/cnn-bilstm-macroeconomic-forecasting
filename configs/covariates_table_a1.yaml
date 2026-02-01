@@ -1,0 +1,161 @@
+# Table A1 (Appendix A.1) from the paper: additional covariates (Granger-causing) per dependent variable.
+# Variable IDs use the repo's canonical snake_case naming.
+
+consumption:
+  - inflation
+  - per_capita_gdp
+  - corporate_taxation
+  - private_savings
+  - exp_durable_goods
+  - household_income
+  - unemployment_rate
+  - unempl_over_27w
+
+investments:
+  - consumption
+  - imports
+  - exports
+  - per_capita_gdp
+  - firms_profits
+  - exp_durable_goods
+  - gdp
+  - house_prices
+  - employment_rate
+  - unemployment_rate
+  - unempl_over_27w
+
+imports:
+  - consumption
+  - exports
+  - inflation
+  - gdp
+  - exp_durable_goods
+  - household_income
+  - government_expenditure
+  - house_prices
+
+exports:
+  - consumption
+  - investments
+  - inflation
+  - gdp
+  - exp_durable_goods
+  - government_expenditure
+  - unemployment_rate
+
+inflation:
+  - corporate_taxation
+  - private_savings
+  - gdp
+  - government_expenditure
+  - unempl_over_27w
+
+wages:
+  - per_capita_gdp
+  - firms_profits
+  - corporate_taxation
+  - household_income
+
+per_capita_gdp:
+  - investments
+  - wages
+  - firms_profits
+  - corporate_taxation
+  - private_savings
+  - gdp
+  - household_income
+  - employment_rate
+
+firms_profits:
+  - wages
+  - per_capita_gdp
+  - private_savings
+  - gdp
+
+corporate_taxation:
+  - wages
+  - firms_profits
+  - private_savings
+  - unemployment_rate
+
+private_savings:
+  - wages
+  - per_capita_gdp
+  - firms_profits
+  - household_income
+
+exp_durable_goods:
+  - inflation
+  - wages
+  - firms_profits
+  - private_savings
+  - employment_rate
+  - unemployment_rate
+  - unempl_over_27w
+
+gdp:
+  - consumption
+  - investments
+  - per_capita_gdp
+  - firms_profits
+  - exp_durable_goods
+  - household_income
+  - government_expenditure
+  - house_prices
+  - unemployment_rate
+
+household_income:
+  - consumption
+  - imports
+  - inflation
+  - wages
+  - firms_profits
+  - private_savings
+  - exp_durable_goods
+  - house_prices
+  - employment_rate
+  - unemployment_rate
+  - unempl_over_27w
+
+government_expenditure:
+  - investments
+  - exports
+  - inflation
+  - exp_durable_goods
+  - household_income
+  - unemployment_rate
+
+house_prices:
+  - imports
+  - exports
+  - inflation
+  - corporate_taxation
+  - exp_durable_goods
+  - gdp
+  - government_expenditure
+  - employment_rate
+  - unemployment_rate
+
+employment_rate:
+  - consumption
+  - inflation
+  - per_capita_gdp
+  - gdp
+  - household_income
+  - government_expenditure
+
+unemployment_rate:
+  - consumption
+  - inflation
+  - exp_durable_goods
+  - gdp
+  - employment_rate
+
+unempl_over_27w:
+  - private_savings
+  - imports
+  - exports
+  - gdp
+  - house_prices
+  - unemployment_rate
+

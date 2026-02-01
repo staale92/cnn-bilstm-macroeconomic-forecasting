@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual envs
+.venv/
+venv/
+ENV/
+
+# Data & results
+data/processed/
+results/
+
+# Paper PDF (avoid redistributing unless you have rights)
+engproc-39-00033-v3.pdf
+
+# IDEs
+.vscode/
+.idea/
